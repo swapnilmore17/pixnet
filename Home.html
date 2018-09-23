@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+   
+}
+
+/* Style the top navigation bar */
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the topnav links */
+.topnav a {
+   display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+	float: left;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #111;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    
+    width: 100%;
+    
+}
+
+/* Add a card effect for articles */
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width:100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>P I X N E T</h2>
+</div>
+
+<div class="topnav">
+  <a href="Home.html">Home</a>
+  <a href="History.html">History</a>
+  <a href="Devices.html">Devices</a>
+   <a href="Shop.html">Shop</a>
+  <a href="Future.html">Future</a>
+  <a href="Cart.html" style="float:right">Cart</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 style="text-align: center;">Welcome to the new world</h2>
+	  <h2>The Tesla T3</h2>
+      <div class="fakeimg" ></div>
+    </div>
+	<img src="https://cdn.mos.cms.futurecdn.net/ibJq5f4gPuToY4pK6NNWdj.jpg" width="100%" height="auto"  />
+    <p>The new generation Tesla. Packed with the latest features and the fastest hardware.More screen means more space to do great things. Go big with the T3 screen. It's the largest ever screen on a Note device and it still fits easily in your hand.
+	Get crisp photos even when it's dark and it's difficult to keep your phone steady. The T3's dual camera has a wide-angle camera that comes with the great low-light capabilities that you've come to expect from Galaxy phones. The dual camera supports 2x optical zoom so you get sharp photos or videos even from a distance, 
+	and both cameras have optical image stabilisation so you get steady shots even when zoomed in.</p>
+	<div class="card">
+      <h2>The New Range of micro-LED TVs</h2>
+      
+      <div class="fakeimg" ></div>
+      
+    </div>
+	<img src="http://koreabizwire.com/wp/wp-content/uploads/2017/04/04_w7_black_1227.jpg" width="100%" height="auto"  />
+	<p>Experience 100% color volume*. Utilising the ground-breaking Quantum dot technology, QLED takes light and turns it into breath-taking color.No matter how bright or dark your surroundings, you’ll always see extreme depth with incomparably bold contrast.
+	No matter where you sit, stand, or lean, you’ll get a great view with consistent colors.</p>
+  </div>
+  
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>New Offers</h2>
+      <img style="height:100px;" src="http://ksassets.timeincuk.net/wp/uploads/sites/54/2016/10/pixel-8-1.jpg"/>
+      <p>Get the Tesla T2 for only $500</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Follow us now</h2>
+  <a href="#" ><h2 style="color:black;">Facebook</h2></a>
+  <a href="#" ><h2 style="color:black;">Instagram</h2></a>
+</div>
+
+</body>
+</html>

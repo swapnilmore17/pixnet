@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+.header {
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+   
+}
+
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav a {
+   display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+	float: left;
+}
+
+.topnav a:hover {
+    background-color: #111;
+}
+
+@media (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width:100%;
+    }
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #cc0000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+	
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("First name must be filled out");
+        return false;
+    }
+	x = document.forms["myForm"]["lname"].value;
+    if (x == "") {
+        alert("Last name must be filled out");
+        return false;
+    }
+	x = document.forms["myForm"]["phone"].value;
+    if (x == "") {
+        alert("Phone must be filled out");
+        return false;
+    }
+	x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("Email must be filled out");
+        return false;
+    }
+	x = document.forms["myForm"]["city"].value;
+    if (x == "") {
+        alert("City name must be filled out");
+        return false;
+    }
+	x = document.forms["myForm"]["address"].value;
+    if (x == "") {
+        alert("Address must be filled out");
+        return false;
+    }
+}
+</script>
+
+</head>
+<body>
+<div class="header">
+  <h2>P I X N E T</h2>
+</div>
+
+<div class="topnav">
+  <a href="Home.html">Home</a>
+  <a href="History.html">History</a>
+  <a href="Devices.html">Devices</a>
+   <a href="Shop.html">Shop</a>
+  <a href="Future.html">Future</a>
+  
+</div>
+
+<div class="container">
+  <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Item List</label>
+      </div>
+      <div class="col-75">
+        <p>1) 1	MICRA TV 54" <p/>
+		
+		<p>Rupees 1,20,000.00</p>
+		<br>
+		<p>Total = 1,20,000.00</p>
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="fname" placeholder="Your name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lname" placeholder="Your last name">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="phone">Phone Number</label>
+      </div>
+      <div class="col-75">
+        <input style="width: 100%;margin-top: 6px;float:left;border-radius: 5px;padding: 15px;border: 1px solid #ccc;" type="number" id="phone" name="phone" placeholder="+91" min="1000000000" max="9999999999">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input style="width: 100%;margin-top: 6px;float:left;border-radius: 5px;padding: 15px;border: 1px solid #ccc;" type="email" id="email" name="email" placeholder="xyz@gmail.com">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="city">City</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="city" name="city" placeholder="">
+      </div>
+    </div>
+	
+    <div class="row">
+      <div class="col-25">
+        <label for="state">State</label>
+      </div>
+      <div class="col-75">
+        <select id="state" name="state">
+          <option value="MH">Maharashtra</option>
+          <option value="DL">Delhi</option>
+          <option value="KN">Karnataka</option>
+		  <option value="GJ">Gujarat</option>
+        </select>
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="address">Address</label>
+      </div>
+      <div class="col-75">
+        <textarea id="address" name="address" placeholder="" style="height:150px"></textarea>
+      </div>
+    </div>
+    
+    <div class="row">
+      <input type="submit" value="Confirm">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
